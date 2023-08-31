@@ -3,22 +3,14 @@ import statistics from 'data/statistics.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json';
 import { User } from 'components/User/User';
-import { Statistics } from './Statistics/Statistics';
-import { FriendList } from './FriendList/FriendList';
-import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Statistics } from '../Statistics/Statistics';
+import { FriendList } from '../FriendList/FriendList';
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
+import { Wrappper } from './App.styled';
 
 export const App = () => {
   return (
-    <div
-    // style={{
-    //   height: '100vh',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   fontSize: 40,
-    //   color: '#010101',
-    // }}
-    >
+    <Wrappper>
       <User
         avatar={user.avatar}
         username={user.username}
@@ -31,6 +23,6 @@ export const App = () => {
       <Statistics title="Upload stats" stats={statistics} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Wrappper>
   );
 };
