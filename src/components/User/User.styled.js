@@ -7,6 +7,7 @@ export const WrapperProfile = styled('div')(() => {
     background: '#6eabe4',
     margin: '0 auto',
     borderRadius: 8,
+    marginBottom: 20,
   };
 });
 export const WrapperDescription = styled('div')(() => {

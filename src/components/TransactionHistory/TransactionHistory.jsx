@@ -1,12 +1,16 @@
 import { TransactionHistoryBody } from 'components/TransactionHistoryBody/TransactionHistoryBody';
+import {
+  TrasactionStyled,
+  TrasactionTableTitle,
+} from './TransactionHistory.styled';
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <TrasactionStyled>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TrasactionTableTitle>Type</TrasactionTableTitle>
+          <TrasactionTableTitle>Amount</TrasactionTableTitle>
+          <TrasactionTableTitle>Currency</TrasactionTableTitle>
         </tr>
       </thead>
       {items.map(item => {
@@ -19,6 +23,6 @@ export const TransactionHistory = ({ items }) => {
           />
         );
       })}
-    </table>
+    </TrasactionStyled>
   );
 };
