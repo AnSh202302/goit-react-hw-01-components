@@ -7,7 +7,7 @@ import {
 export const Statistics = ({ title, stats }) => {
   return (
     <WrapperStatistics>
-      <h2 className="title">{title}</h2>
+      {title.length > 0 && <h2>{title}</h2>}
       <StatisticsList>
         {stats.map(data => {
           return (
